@@ -1,0 +1,185 @@
+    div::selection,
+      i::selection {background-color: transparent;}
+  input::selection {
+     background-color: #222222;
+     color: #fff;
+    }
+
+body {
+    margin: 30px;
+    background: #222222;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.color_white {color: #ffffff !important;}
+
+.color_black {color: #222222 !important;}
+
+.top_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* create task button */
+.create_task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    font-size: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.create_task div:first-child {
+    margin-right: 10px;
+}
+
+.create_task:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+/* create task button */
+
+/* header */
+.app_name {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+/* header */
+
+
+/* date and time */
+.date_time {
+    display: flex;
+    align-items: center;
+}
+
+.date {
+    font-size: 20px;
+}
+.month {
+    display: flex;
+}
+.time {
+    display: flex;
+    font-size: 52px;
+}
+/* date and time */
+
+
+
+
+.main_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+
+
+/* tasks */
+.tasks_header {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.task {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checked {
+    color: #fff !important;
+}
+
+.task input {
+    width: 450px;
+    background-color: #222222;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+input::selection {
+    background-color: #fff;
+    color: #000;
+}
+
+.remove-done-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.new_task_button {
+    width: 150px;
+    margin-bottom: 50px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.new_task_button:hover {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000 !important;
+    transition: 0.8s;
+}
+
+.task_nonactive {
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.task_nonactive input {
+    width: 450px;
+    background-color: #222222;
+    border: none;
+    outline: none;
+    color: gray;
+    font-size: 20px;
+}
+
+.task_nonactive .task-checkbox {
+    border-color: gray;
+}
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>TASK MANAGER</title>
+</head>
+
+<body>
+    <div class="top_menu  color_white">
+
+        <div class="app_name">
+            <div class="logo">
+                <img src="img/baseline_offline_bolt_white_48dp.png" alt="" style="width: 40px; height: 40px;">
+            </div>
+            <div class="name">
+                Task Manager
+            </div>
+        </div>
+
+        <div class="date_time">
+            <div class="date">
+                <div class="day">
+
+                </div>
+                <div class="month">
+                    <div class="month_name">
+
+                    </div>
+                    <div class="day_number">
+
+                    </div>
+                </div>
+            </div>
+            <div class="time">
+                <div class="hours">
+
+                </div>
+                <div class="minutes">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="new_task_button" onclick="createTask()">
+        <i class="material-icons" style="margin-right: 10px;">
+            add_circle_outline
+        </i>
+        Add Task
+    </div>
+    <div class="main_wrapper">
+        <div class="tasks_header">
+            Tasks
+        </div>
+        <div class="task_nonactive" onclick="taskActive()">
+            <div class="task-checkbox">
+                <div style="color: transparent;">
+                    <i class="material-icons">
+                        done
+                    </i>
+                </div>
+            </div>
+            <div class="task-text">
+                <input type="text" placeholder="write something you need to do" class="taskContent" id="task_nonactive">
+            </div>
+            <div class="remove-done-button">
+                <i class="material-icons" id="done">
+                    done
+                </i>
+                <i class="material-icons" id="remove">
+                    close
+                </i>
+            </div>
+        </div>
+    </div>
+
+    <template class="task_template">
+        <div class="task">
+            <div class="task-checkbox">
+                <div class="checkbox-block" style="color: transparent; text-decoration: none;" onclick="check(this, inpt)">
+                    <i class="material-icons">
+                        done
+                    </i>
+                </div>  
+            </div>
+            <div class="task-text">
+                <input type="text" value=" " class="task-content">
+            </div>
+            <div class="remove-done-button">
+                <i class="material-icons" id="done">
+                    done
+                </i>
+                <i class="material-icons" id="remove">
+                    close
+                </i>
+            </div>
+        </div>
+    </template>
+    
+
+    <script src="script.js"></script>
+    <script>
+        require('./render.js');
+    </script>
+    
+</body>
+</html>
