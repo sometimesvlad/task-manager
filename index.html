@@ -10,7 +10,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>TASK MANAGER</title>
 </head>
-
+<style>
+    .task-text {
+        display: block;
+    }
+</style>
 <body>
     <div class="top_menu  color_white">
 
@@ -48,66 +52,38 @@
         </div>
     </div>
 
-    <div class="new_task_button" onclick="createTask()">
-        <i class="material-icons" style="margin-right: 10px;">
-            add_circle_outline
-        </i>
-        Add Task
-    </div>
-    <div class="main_wrapper">
-        <div class="tasks_header">
-            Tasks
-        </div>
-        <div class="task_nonactive" onclick="taskActive()">
-            <div class="task-checkbox">
-                <div style="color: transparent;">
-                    <i class="material-icons">
-                        done
-                    </i>
-                </div>
-            </div>
-            <div class="task-text">
-                <input type="text" placeholder="write something you need to do" class="taskContent" id="task_nonactive">
-            </div>
-            <div class="remove-done-button">
-                <i class="material-icons" id="done">
-                    done
-                </i>
-                <i class="material-icons" id="remove">
-                    close
-                </i>
-            </div>
-        </div>
-    </div>
-
-    <template class="task_template">
+    <div class="wrapper">
         <div class="task">
-            <div class="task-checkbox">
-                <div class="checkbox-block" style="color: transparent; text-decoration: none;" onclick="check(this, inpt)">
-                    <i class="material-icons">
-                        done
-                    </i>
-                </div>  
-            </div>
-            <div class="task-text">
-                <input type="text" value=" " class="task-content">
-            </div>
-            <div class="remove-done-button">
-                <i class="material-icons" id="done">
-                    done
-                </i>
-                <i class="material-icons" id="remove">
-                    close
-                </i>
+           <label class="checkbox_container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <input type="text" placeholder="write something to do..." onkeypress="return createTask(event)" class="task-text">
+           </label>
+           <div class="remove">
+            
+           </div>
+        </div>
+    </div>
+    
+    
+
+    <template class="template">
+         <div class="task">
+            <label class="checkbox_container">
+                    <input type="checkbox" onclick="checkk(event, this)">
+                    <span class="checkmark"></span>
+                    <!-- <div class="check_target"></div> -->
+                    <input type="text" placeholder="write something to do..." class="task-text" onkeypress="return createTask(event)" >
+            </label>
+            <div class="remove_btn">
+
             </div>
         </div>
     </template>
-    
-
+        
     <script src="script.js"></script>
     <script>
         require('./render.js');
     </script>
-    
 </body>
 </html>

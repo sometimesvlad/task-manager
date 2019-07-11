@@ -48,29 +48,40 @@ minutesBlock.innerHTML = timeMinutes.getMinutes();
 
 
 
-const template = document.querySelector('.task_template');
-const fragment = document.createDocumentFragment();
-      mainWrapper = document.querySelector('.main_wrapper');
+var wrapper = document.querySelector('.wrapper');
+   
 
-function createTask() {
-    fragment.appendChild(template.content.cloneNode(true));
-    mainWrapper.appendChild(fragment);
-}
-
-function taskActive() {
-    document.querySelector('.task_nonactive').style.color = "#fff";
-    document.querySelector('.task-checkbox').style.border = "1px solid #fff";
-    document.querySelector('input').style.color = "#fff";
-    document.querySelector('input').placeholder = ' ';
-}
-
-let inpt = [document.querySelectorAll('input')];
-function check(Element) {
-    if (Element.style.color == 'transparent')  {
-        Element.style.color = '#fff';
-    } else {
-        Element.style.color = 'transparent';
+function createTask(e) {
+    var fragment = document.createDocumentFragment();
+        template = document.querySelector('.template');
+    if (e.keyCode == 13) {
+       fragment.appendChild(template.content.cloneNode(true));
+       wrapper.appendChild(fragment);
     }
 }
+
+// var taskObject = {
+//     tasks: document.getElementsByClassName('checkbox_container'),
+//     checkbox: document.getElementsByClassName('checkmark'),
+//     taskText: document.getElementsByClassName('task-text'),
+//     check: function() {
+//         document.getElementsByClassName('task-text').style.display = 'none';
+//     }
+// }
+
+function checkk(event) {
+    var taskObject = {
+        taskText: document.getElementsByClassName('task-text'),
+        check: function() {
+            alert('alert');
+        }
+    }
+    if (event.type == 'click') {
+       taskObject.check();
+    }
+}
+
+
+
 
 

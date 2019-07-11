@@ -82,7 +82,7 @@ body {
 
 
 
-.main_wrapper {
+.wrapper {
     display: flex;
     flex-wrap: wrap;
     margin-top: 60px;
@@ -91,95 +91,74 @@ body {
 
 
 /* tasks */
-.tasks_header {
-    font-size: 30px;
-    color: #fff;
-    margin-bottom: 20px;
+
+label {
+    display: flex;
 }
+
+.task-text {
+    text-decoration: none;
+}
+
 .task {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
+}
+
+label input[type=text] {
+    background: transparent;    
+    border: none;
+    outline: none;
+    font-size: 25px;
     color: #fff;
 }
 
-.task-checkbox {
-    width: 20px;
-    height: 20px;
-    padding: 3px;
+.checkbox_container input[type=checkbox] {
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox_container span {
+    height: 30px;
+    width: 30px;
     margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: transparent;
     border: 1px solid #fff;
     border-radius: 5px;
-    cursor: pointer;
-}
-
-.checked {
-    color: #fff !important;
-}
-
-.task input {
-    width: 450px;
-    background-color: #222222;
-    border: none;
-    outline: none;
     color: #fff;
-    font-size: 20px;
 }
 
-input::selection {
-    background-color: #fff;
-    color: #000;
+
+.checkbox_container .checkmark:after {
+    content: "";
+    display: none;
 }
 
-.remove-done-button {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+.checkbox_container input[type=checkbox]:checked ~ .checkmark:after {
+    display: block;
 }
 
-.new_task_button {
-    width: 150px;
-    margin-bottom: 50px;
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 10px;
-    font-size: 20px;
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 15px;
-    cursor: pointer;
+.checkbox_container .checkmark:after {
+    margin-left: 10px;
+    margin-top: 6px;
+    width: 6px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
-.new_task_button:hover {
-    background-color: #fff;
-    border: 1px solid #000;
-    color: #000 !important;
-    transition: 0.8s;
+.check_target {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: green;
+    position: absolute;
 }
-
-.task_nonactive {
-    display: flex;
-    align-items: center;
-    color: gray;
-    margin-bottom: 30px;
-}
-
-.task_nonactive input {
-    width: 450px;
-    background-color: #222222;
-    border: none;
-    outline: none;
-    color: gray;
-    font-size: 20px;
-}
-
-.task_nonactive .task-checkbox {
-    border-color: gray;
-}
-
 
