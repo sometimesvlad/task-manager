@@ -74,7 +74,9 @@ function change(element) {
     element.parentNode.classList.toggle("checked");
 }
 
+var elt = document.querySelector('.remove');
+
 function remove(element) {
-    element.parentNod
+    element.closest('.task').remove();
 }
 
