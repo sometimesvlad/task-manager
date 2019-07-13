@@ -90,23 +90,26 @@ body {
 
 
 
+
 /* tasks */
 
 label {
     display: flex;
 }
 
-.task-text {
-    text-decoration: none;
-}
 
 .task {
+    width: 100%;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
 
-label input[type=text] {
+.checkbox_container {
+    width: 70%;
+}
+
+.checkbox_container input[type=text] {
     background: transparent;    
     border: none;
     outline: none;
@@ -132,7 +135,6 @@ label input[type=text] {
     color: #fff;
 }
 
-
 .checkbox_container .checkmark:after {
     content: "";
     display: none;
@@ -154,11 +156,8 @@ label input[type=text] {
     transform: rotate(45deg);
 }
 
-.check_target {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    background: green;
-    position: absolute;
+.checked {
+    text-decoration: line-through;
+    color: #fff;
 }
 

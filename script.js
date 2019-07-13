@@ -1,4 +1,5 @@
 
+
 var dayBlock = document.querySelector('.day');
 monthBlock = document.querySelector('.month_name');
 dayNumberBlock = document.querySelector('.day_number');
@@ -60,28 +61,20 @@ function createTask(e) {
     }
 }
 
-// var taskObject = {
-//     tasks: document.getElementsByClassName('checkbox_container'),
-//     checkbox: document.getElementsByClassName('checkmark'),
-//     taskText: document.getElementsByClassName('task-text'),
-//     check: function() {
-//         document.getElementsByClassName('task-text').style.display = 'none';
-//     }
+// var elems = document.getElementsByClassName('checkbox_container');
+// function check() {
+//     Array.from(elems).forEach(v => v.addEventListener('change', function(){
+//       this.lastElementChild.classList.toggle('checked');
+//     }));
 // }
 
-function checkk(event) {
-    var taskObject = {
-        taskText: document.getElementsByClassName('task-text'),
-        check: function() {
-            alert('alert');
-        }
-    }
-    if (event.type == 'click') {
-       taskObject.check();
-    }
+// попробовать сделать через вайл
+
+function change(element) {
+    element.parentNode.classList.toggle("checked");
 }
 
-
-
-
+function remove(element) {
+    element.parentNod
+}
 

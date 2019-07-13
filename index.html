@@ -10,17 +10,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>TASK MANAGER</title>
 </head>
-<style>
-    .task-text {
-        display: block;
-    }
-</style>
 <body>
     <div class="top_menu  color_white">
 
         <div class="app_name">
             <div class="logo">
-                <img src="img/baseline_offline_bolt_white_48dp.png" alt="" style="width: 40px; height: 40px;">
+                <img src="img/baseline_offline_bolt_white_48dp.png" alt="" style="width: 45px; height: 45px;">
             </div>
             <div class="name">
                 Task Manager
@@ -55,12 +50,12 @@
     <div class="wrapper">
         <div class="task">
            <label class="checkbox_container">
-                <input type="checkbox">
+                <input type="checkbox" onclick="change(this)">
                 <span class="checkmark"></span>
                 <input type="text" placeholder="write something to do..." onkeypress="return createTask(event)" class="task-text">
            </label>
-           <div class="remove">
-            
+           <div class="remove" onclick="remove(this)">
+                <img src="img/baseline_close_white_18dp.png" alt="remove">
            </div>
         </div>
     </div>
@@ -70,13 +65,12 @@
     <template class="template">
          <div class="task">
             <label class="checkbox_container">
-                    <input type="checkbox" onclick="checkk(event, this)">
+                    <input type="checkbox" onclick="change(this)">
                     <span class="checkmark"></span>
-                    <!-- <div class="check_target"></div> -->
                     <input type="text" placeholder="write something to do..." class="task-text" onkeypress="return createTask(event)" >
             </label>
-            <div class="remove_btn">
-
+            <div class="remove">
+                <img src="img/baseline_close_white_18dp.png" alt="remove">
             </div>
         </div>
     </template>
