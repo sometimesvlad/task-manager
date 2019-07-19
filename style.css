@@ -1,50 +1,40 @@
     div::selection,
-      i::selection {background-color: transparent;}
+    img::selection {background-color: transparent;}
+
   input::selection {
      background-color: #222222;
      color: #fff;
     }
 
+html{height: 96%;}
 body {
+    height: 96%;
     margin: 30px;
     background: #222222;
     font-family: 'Ubuntu', sans-serif;
 }
 
-.color_white {color: #ffffff !important;}
+.main_wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
 
-.color_black {color: #222222 !important;}
+.content{
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
 
 .top_menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #fff;
 }
 
-
-
-/* create task button */
-.create_task {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 2px;
-    font-size: 10px;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.create_task div:first-child {
-    margin-right: 10px;
-}
-
-.create_task:hover {
-    transition: 0.3s;
-    cursor: pointer;
-    border: 1px solid #fff;
-}
-/* create task button */
 
 /* header */
 .app_name {
@@ -74,40 +64,33 @@ body {
     display: flex;
 }
 .time {
+    margin-left: 5px;
     display: flex;
     font-size: 52px;
+    color: #fff;
 }
 /* date and time */
 
-
-
-
-.wrapper {
+.tasks_wrapper {
     display: flex;
     flex-wrap: wrap;
     margin-top: 60px;
 }
 
-
-
-
 /* tasks */
-
-label {
-    display: flex;
-}
-
-
 .task {
     width: 100%;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
+/* tasks */
 
-.checkbox_container {
-    width: 70%;
-}
+
+/* custom checkbox */
+
+label {display: flex;}
+.checkbox_container {width: 70%;}
 
 .checkbox_container input[type=text] {
     background: transparent;    
@@ -125,9 +108,7 @@ label {
     cursor: pointer;
 }
 
-.checkmark:hover {
-    cursor: pointer;
-}
+.checkmark {cursor: pointer;}
 
 .checkbox_container span {
     height: 30px;
@@ -144,9 +125,7 @@ label {
     display: none;
 }
 
-.checkbox_container input[type=checkbox]:checked ~ .checkmark:after {
-    display: block;
-}
+.checkbox_container input[type=checkbox]:checked ~ .checkmark:after {display: block;}
 
 .checkbox_container .checkmark:after {
     margin-left: 10px;
@@ -164,5 +143,56 @@ label {
     text-decoration: line-through;
     color: #fff;
 }
+
+/* custom checkbox */
+
+
+/* add and remove btns */
+.remove {cursor: pointer;}
+.add_task_btn {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.add_icon {
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+}
+.add_caption::selection {background: transparent;}
+/* add and remove btns */
+
+/* footer */
+.footer {flex: 0 0 auto;}
+
+.footer_links {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+}
+a:hover {text-decoration: underline;}
+
+.footer_links img {
+    width: 30px;
+    height: 30px;
+}
+
+.telegram,
+.github,
+.instagram {
+    margin-left: 5px;
+    font-size: 18px;
+}
+.git_block {margin: 0 30px;}
+/* footer */
 
 

@@ -8,9 +8,11 @@ let win;
 function createWindow(){
     win = new BrowserWindow({
         width: 650, 
-        height: 650, 
-        backgroundColor: '#222222',
-        icon: __dirname + 'img/baseline_offline_bolt_white_48dp.png'
+        height: 1900,
+        resizable: false,
+        autoHideMenuBar: true, 
+        backgroundColor: '#262626',
+        icon: __dirname + "img/baseline_offline_bolt_white_48dp.png"
     });
 
     win.loadURL(url.format({
@@ -19,7 +21,7 @@ function createWindow(){
         slashes: true
     }));
 
-    win.webContents.openDevTools();
+    
 
     win.on('closed', () => {
         win = null;
@@ -31,4 +33,3 @@ app.on('window-all-closed', () => {
     app.quit();
 });
 
-    

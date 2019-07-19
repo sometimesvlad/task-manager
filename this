@@ -1,8 +1,0 @@
-function func() {
-for (i=0; i < document.querySelectorAll('.remove').length; i++) {
-    document.querySelectorAll('.remove')[i].onclick = function funcc() {
-        this.innerHTML = 'lorem';
-    }
-}
-}
-onclick="func(this)"

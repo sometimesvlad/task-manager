@@ -41,15 +41,20 @@ var dayNumber = new Date();
 dayNumberBlock.innerHTML = dayNumber.getDate();
 
 //время
-var timeHours = new Date();
-timeMinutes = new Date();
-hoursBlock.innerHTML = timeHours.getHours() + ':';
-minutesBlock.innerHTML = timeMinutes.getMinutes();
+function clock(){
+    var date = new Date(),
+        hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours(),
+        minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
+        seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
+    document.getElementById('clock').innerHTML = hours + ':' + minutes ;
+}
+setInterval(clock, 1000);
+clock();
 // время
 
 
 
-var wrapper = document.querySelector('.wrapper');
+var wrapper = document.querySelector('.tasks_wrapper');
    
 
 function createTask(e) {
@@ -61,14 +66,12 @@ function createTask(e) {
     }
 }
 
-// var elems = document.getElementsByClassName('checkbox_container');
-// function check() {
-//     Array.from(elems).forEach(v => v.addEventListener('change', function(){
-//       this.lastElementChild.classList.toggle('checked');
-//     }));
-// }
-
-// попробовать сделать через вайл
+function addTask() {
+    var fragment = document.createDocumentFragment();
+        template = document.querySelector('.template');
+        fragment.appendChild(template.content.cloneNode(true));
+        wrapper.appendChild(fragment);
+    }
 
 function change(element) {
     element.parentNode.classList.toggle("checked");
@@ -77,6 +80,12 @@ function change(element) {
 var elt = document.querySelector('.remove');
 
 function remove(element) {
-    element.closest('.task').remove();
+    if (document.getElementsByClassName('task').length == 1){
+        return;
+    } else {
+    element.closest('.task').remove(); 
+    }
 }
+
+
 
