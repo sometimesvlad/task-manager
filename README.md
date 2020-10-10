@@ -1,4 +1,4 @@
-# task-manager
+# ElectronManager
 Simple task manager on Electron.JS
 
 ## Install
